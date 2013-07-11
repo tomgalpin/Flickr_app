@@ -1,0 +1,1 @@
+web: buncle exec unicorn -p $PORT -E $RACK_ENV

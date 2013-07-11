@@ -1,0 +1,8 @@
+<h1>Photos#show</h1>
+
+<h1><%= @photo.name %></h1>
+
+<p><%= image_tag @photo.url %></p>
+
+<%= link_to 'Edit', edit_photo_path(@photo.album.id, @photo) %>
+<%= link_to, 'Back', album_photos_path(@photo.album.id) %>

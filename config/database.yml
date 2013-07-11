@@ -1,0 +1,26 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: Flickr_development
+  pool: 5
+  username: tomgalpin
+  host: localhost
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: Flickr_test
+  pool: 5
+  username: tomgalpin
+  host: localhost
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: Flickr_production
+  pool: 5
+  username: tomgalpin
+  password:
