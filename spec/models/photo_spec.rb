@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Photo do
 
-  it "has a valid name" do
-  end
+  it { should belong_to(:album) }
 
-  it "has a valid url" do
-  end
+  # photo = FactoryGirl.create(:photo)
+
+  it { should validate_presence_of(:name) }
 
 end

@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'dotenv-rails'
 gem 'sorcery'
+gem 'mail'
+gem 'stripe'
 
 group :development do
   gem 'better_errors'

@@ -13,9 +13,12 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(params[:album])
+    @user = current_user
+    @album.user_id = @user.id
+
 
     if @album.save
-      redirect_to albums_path
+      redirect_to user_path(@user.id)
     else
       render :new
     end

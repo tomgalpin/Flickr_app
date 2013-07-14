@@ -1,0 +1,29 @@
+<div id="users_show_page">
+  <h1><%= @user.username %></h1>
+  <p id="add_album_link">
+    <%= link_to 'Add an Album', new_album_path %>
+  </p>
+  <hr>
+  <%  @albums.each do |album| %>
+    <li><%= link_to album.name, album_path(album.id) %></li>
+    <% end %>
+
+  <br>
+  <hr>
+  <h3>Signup for a paid account:</h3>
+  <div id="account_options">
+    <div id="free_account">
+      <p>
+        Free! You already have signed up for this.  Two free albums.
+      </p>
+    </div>
+    <div id="paid_account">
+      <p>
+        For only $2.99 a month you can add unlimited albums for photo sharing and storage!
+        <br>
+        <%= button_tag "Sign-Up Here!" %>
+      </p>
+    </div>
+  </div>
+
+</div>

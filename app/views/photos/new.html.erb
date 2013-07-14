@@ -1,12 +1,20 @@
-<h1>Photos#new</h1>
+<div id="photos_new">
+  <h1>Photos#new</h1>
 
-<%= form_for(@photo, url: album_photos_path, :html_options => {:multipart => true}) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <fieldset class="photos_add">
+    <%= form_for(@photo, url: album_photos_path, :html_options => {:multipart => true}) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %><br>
+      <br>
+      <div id="photo_chooser">
+        <%= f.file_field :url %><br>
+      </div>
+      <br>
+      <%= f.submit "Add New Photo" %>
+    <% end %>
+  </fieldset>
 
-  <%= f.label :url %>
-  <%= f.file_field :url %>
-
-  <%= f.submit "Add New Photo" %>
-
-  <% end %>
+  <p class="back">
+    <%= link_to 'Back', album_photos_path %>
+  </p>
+</div>

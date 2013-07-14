@@ -1,32 +1,44 @@
-<h1>Users#new</h1>
+<div id="signup_page">
 
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <h1>Users#new</h1>
 
-  <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+  <div id="signup_forms">
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :username %><br>
+        <%= f.text_field :username %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <br>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+
+</div>

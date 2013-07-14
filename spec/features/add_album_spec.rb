@@ -18,7 +18,7 @@ describe 'adding albums' do
     expect(page).to have_text('Jane')
   end
 
-  scenario 'viewing all photos in an album' do
+  it 'should all photos in an album' do
     visit album_path
     expect(page).to have_css("href='/albums/1/photos.1'")
   end

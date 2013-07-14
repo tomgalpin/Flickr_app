@@ -1,0 +1,172 @@
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  box-shadow: 0px 10px 27px rgba(0, 0, 0, 0.25);
+}
+
+#navbar {
+  margin-top: -20px;
+  line-height: 60px;
+}
+
+#home {
+  float: left;
+}
+
+#home a,
+.navbar_buttons a {
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  line-height: 60px;
+}
+
+#logged_in {
+  line-height: 30px;
+  font-size: 10px;
+  color: white;
+}
+
+#login-signup_container {
+ /* border: 2px solid black;*/
+  width: 80%;
+  overflow: hidden;
+  margin: 50px auto;
+  box-shadow: 0px 10px 27px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+#signup_container {
+  width: 50%;
+  float: left;
+  border-right: 1px solid black;
+}
+
+#signup_container h2,
+#login_container h2 {
+  margin-top: 0;
+}
+
+#user_username,
+#user_password,
+#user_password_confirmation,
+#username,
+#password {
+  width: 250px;
+}
+
+#current_users_list {
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  margin: 50px auto;
+  box-shadow: 0px 10px 27px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+#albums_show,
+#album_new,
+#albums_photos,
+#photos_new,
+#signin_page,
+#signup_page,
+#password_reset,
+#users_show_page {
+  padding: 20px;
+  width: 50%;
+  margin: 50px auto;
+  box-shadow: 0px 10px 27px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+.navbar_buttons {
+  float: right;
+  color: gray;
+  margin-right: 20px;
+  font-size: 10px;
+  line-height: 30px;
+}
+
+#signin_forms,
+#signup_page {
+  text-align: center;
+  margin: 20px auto;
+  padding: 0 80px 20px 80px;
+}
+#albums_show h1,
+#album_new h1,
+.back,
+#add_album_link,
+#albums_photos h1,
+#albums_photos p,
+#photos_new h1,
+#photos_new p,
+#signin_page h1,
+#signup_page h1,
+#signup_page h3,
+#users_show_page h1 {
+  text-align: center;
+}
+
+#password_reset {
+  text-align: center;
+  padding: 20px;
+}
+
+#add_album_link {
+  margin-top: 20px;
+}
+
+#album_name {
+  list-style: none;
+}
+
+.albums_add,
+.photos_add {
+  padding: 15px;
+  text-align: center;
+}
+
+#photos {
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+}
+
+#photo_chooser {
+  text-align: center;
+}
+
+#account_options {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+#users_show_page h3 {
+  text-align: center;
+}
+
+#free_account {
+  float: left;
+  width: 40%;
+  border-right: 1px solid gray;
+}
+
+#free_account,
+#paid_account {
+  text-align: center;
+
+}
+
+#free_account p,
+#paid_account p {
+  font-size: 15px;
+}

@@ -18,3 +18,4 @@
 #/public/uploads
 
 .env
+config/intializers/secret_token.rb

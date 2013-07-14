@@ -1,9 +1,13 @@
-<h1>Albums#index</h1>
+<div id="albums_show">
+  <h1>Albums#index</h1>
+  <% @albums.each do |album| %>
+  <fieldset>
+    <div>
+      <ul>
+        <li id="album_name"><%= link_to album.name, album_path(album.id) %></li>
+      </ul>
+    </div>
+  </fieldset>
+  <% end %>
 
-<ul>
-<% @albums.each do |album| %>
-  <li><%= link_to album.name, album_path(album.id) %></li>
-<% end %>
-</ul>
-
-<%= link_to 'Add an Album', new_album_path %>
+</div>

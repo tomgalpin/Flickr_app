@@ -3,8 +3,12 @@ class User < ActiveRecord::Base
 
   attr_accessible :username, :email, :password, :password_confirmation
 
+  has_many :albums
+  has_many :photos, :through => :albums
+
   validates_confirmation_of :password
-  validates_presence_of :passowrd, :on => :create
+  validates_presence_of :password, :on => :create
+  validates_presence_of :username
   validates_presence_of :email
   validates_uniqueness_of :email
 end

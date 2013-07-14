@@ -1,15 +1,16 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def current_user
-    if session[:user_id]
-      @current_user = User.find(session[:user_id])
-    else
-      @current_user = nil
-    end
-  end
 
-  helper_method :current_user
+
+
+  helper_method :current_users_list
+
+  protected
+
+  def current_users_list
+    current_users.map { |user| user.username }.join(', ')
+  end
 
   private
 

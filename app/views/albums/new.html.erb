@@ -1,9 +1,13 @@
-<h1>Albums#new</h1>
+<div id="album_new">
+  <h1>Albums#new</h1>
 
-<%= form_for @album do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit 'Add Album'  %>
-<% end %>
+  <fieldset class="albums_add">
+    <%= form_for @album do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.hidden_field :user_id %>
+      <%= f.submit 'Add Album'  %>
+    <% end %>
+  </fieldset>
 
-<%= link_to 'Back', albums_path %>
+</div>

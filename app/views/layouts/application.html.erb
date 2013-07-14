@@ -8,18 +8,29 @@
 </head>
 <body>
 
-  <div id="navbar_container">
-    <div class="navbar">
-      <a href='/'>Home</a>
-      <% if current_user %>
-        Loggid in as <%= current_user.username %>
-        <%= link_to "Log Out", logout_path %>
-      <% else %>
-        <%= link_to "Sign Up", signup_path %> or
-        <%= link_to "Log In", login_path %>
-      <% end %>
-    </div> <!-- class=navbar -->
-  </div> <!-- id=navbar_container -->
+  <nav>
+    <div id="navbar">
+      <ul>
+        <li id="home" class="navbar_buttons">
+          <a href="/">Home</a>
+        </li>
+        <% if current_user %>
+        <li class="navbar_buttons">
+          <%= link_to "Log Out", logout_path %>
+        </li>
+        <li id="logged_in" class="navbar_buttons">
+          <%= link_to current_user.username, user_path(current_user.id) %>
+        </li>
+        <% else %>
+        <li class="navbar_buttons">
+          <%= link_to "Sign Up", signup_path %>
+          <%= link_to "Log In", login_path %>
+        </li>
+
+        <% end %>
+      </ul>
+    </div>
+  </nav>
 
   <%= yield %>
 
