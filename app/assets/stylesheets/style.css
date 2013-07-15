@@ -174,3 +174,9 @@ nav {
 #paid_account p {
   font-size: 15px;
 }
+
+#thank_you_message {
+  text-align: center;
+  font-size: 9px;
+  margin-bottom: -10px;
+}

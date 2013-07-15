@@ -1,6 +1,12 @@
 <div id="albums_photos">
   <h1>Album: <%= @album.name %></h1>
-  <p><%= link_to 'Add a Photo to This Album', new_album_photos_path(@album.id) %></p>
+
+  <% if @user.is_paid? && @user.id == @album.user_id %>
+    <p>
+      <%= link_to 'Add a Photo to This Album', new_album_photos_path(@album.id) %>
+    </p>
+  <% end %>
+
   <% @album.photos.each do |photo| %>
   <p>Photo:  <%= link_to photo.name, album_photos_path(@album.id, photo.id) %></p>
   <div id="photos">

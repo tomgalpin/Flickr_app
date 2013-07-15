@@ -7,15 +7,15 @@ class ChargesController < ApplicationController
 
     customer = Stripe::Customer.create(
       :email => user.email,
-      :card => params[:stripeToken]
+      :card => params[:stripeToken],
+      :plan => 'Flickr'
       )
 
     user.customer_id = customer.id
-    user.save
 
-    rescue Stripe::CardError => e
-      flash[:error] = e.message
-      redirect_to charges_path
-
+    if user.save
+      redirect_to user_path(user.id)
+    end
   end
+
 end

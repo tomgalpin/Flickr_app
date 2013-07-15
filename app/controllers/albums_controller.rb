@@ -5,6 +5,7 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+    @user = current_user
   end
 
   def new
