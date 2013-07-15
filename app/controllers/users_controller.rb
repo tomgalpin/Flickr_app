@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @user = current_user
 
     @albums = Album.where(:user_id => @user.id)
+
   end
 
   def new
@@ -24,6 +25,13 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
+      if params[:stripeToken] != nil
+        customer = Stripe::Customer.create(
+          :email => @user.email,
+          :card => params[:stripeToken],
+          :plan => "paid"
+          )
+      end
       # auto_login(@user)
       # UserMailer.registration_confirmation(@user).deliver
       redirect_to root_path, :notice => "Signed In!"

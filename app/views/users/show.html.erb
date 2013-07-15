@@ -1,8 +1,13 @@
 <div id="users_show_page">
+
   <h1><%= @user.username %></h1>
-  <p id="add_album_link">
-    <%= link_to 'Add an Album', new_album_path %>
-  </p>
+
+  <% if @albums.count < 2 %>
+    <p id="add_album_link">
+      <%= link_to 'Add an Album', new_album_path %>
+    </p>
+  <% end %>
+
   <hr>
   <%  @albums.each do |album| %>
     <li><%= link_to album.name, album_path(album.id) %></li>
@@ -20,9 +25,18 @@
     <div id="paid_account">
       <p>
         For only $2.99 a month you can add unlimited albums for photo sharing and storage!
-        <br>
-        <%= link_to "Sign-Up Here!"  %>
       </p>
+        <br>
+
+        <%= form_tag charges_path do %>
+          <script
+            src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+            data-key="pk_test_YdBv53fHLnm3VP1TxecxLsFQ"
+            data-amount="299"
+            data-name="Tom's Flickr"
+            data-description="Unlimited Albums for only $2.99/Month!">
+          </script>
+        <% end %>
     </div>
   </div>
 

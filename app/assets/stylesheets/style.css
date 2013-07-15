@@ -78,7 +78,8 @@ nav {
 #signin_page,
 #signup_page,
 #password_reset,
-#users_show_page {
+#users_show_page,
+#new_subscription {
   padding: 20px;
   width: 50%;
   margin: 50px auto;
@@ -115,6 +116,10 @@ nav {
   text-align: center;
 }
 
+#new_subscription {
+  text-align: center;
+}
+
 #password_reset {
   text-align: center;
   padding: 20px;
@@ -146,7 +151,7 @@ nav {
 
 #account_options {
   margin: 20px auto;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid black;
 }
 
@@ -155,15 +160,14 @@ nav {
 }
 
 #free_account {
-  float: left;
-  width: 40%;
-  border-right: 1px solid gray;
+
+  border-bottom: 1px solid gray;
+  text-align: center;
 }
 
 #free_account,
 #paid_account {
   text-align: center;
-
 }
 
 #free_account p,

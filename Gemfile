@@ -9,8 +9,7 @@ gem 'pg'
 gem 'dotenv-rails'
 gem 'sorcery'
 gem 'mail'
-gem 'stripe'
-gem 'stripe_event'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :development do
   gem 'better_errors'

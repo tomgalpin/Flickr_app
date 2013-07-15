@@ -1,12 +1,16 @@
 Flickr::Application.routes.draw do
 
-  get "subscriptions/new"
+  get "charges/new"
+
+  get "charges/create"
 
   resources :password_resets
 
   get 'logout' => 'sessions#destroy', :as => 'logout'
   get 'login' => 'sessions#new', :as => 'login'
   get 'signup' => 'users#new', :as => 'signup'
+
+  resources :charges
 
   resources :users do
     member do
