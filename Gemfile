@@ -10,6 +10,7 @@ gem 'dotenv-rails'
 gem 'sorcery'
 gem 'mail'
 gem 'stripe'
+gem 'stripe_event'
 
 group :development do
   gem 'better_errors'

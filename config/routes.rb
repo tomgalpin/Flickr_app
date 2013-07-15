@@ -1,5 +1,7 @@
 Flickr::Application.routes.draw do
 
+  get "subscriptions/new"
+
   resources :password_resets
 
   get 'logout' => 'sessions#destroy', :as => 'logout'

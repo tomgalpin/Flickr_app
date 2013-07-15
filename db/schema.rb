@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130712012046) do
+ActiveRecord::Schema.define(:version => 20130715020335) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20130712012046) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
+    t.string   "customer_id"
+    t.string   "last_4_digits"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
