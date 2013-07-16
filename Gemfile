@@ -24,6 +24,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'pry-rails'
+  gem 'pry-remote'
 end
 
 gem 'shoulda-matchers', :group => [:test]

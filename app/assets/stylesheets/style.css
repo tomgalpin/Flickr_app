@@ -180,3 +180,30 @@ nav {
   font-size: 9px;
   margin-bottom: -10px;
 }
+
+.comments {
+  width: 80%;
+  margin: auto;
+}
+
+.comment {
+  font-size: 10px;
+  margin: 10px 0 -10px 0;
+  overflow: scroll;
+}
+
+.comment_form_div {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.comments_form {
+  width: 80%;
+  margin: auto;
+  height: 80px;
+  overflow: scroll;
+}
+

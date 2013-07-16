@@ -1,9 +1,5 @@
 Flickr::Application.routes.draw do
 
-  get "charges/new"
-
-  get "charges/create"
-
   resources :password_resets
 
   get 'logout' => 'sessions#destroy', :as => 'logout'
@@ -24,6 +20,8 @@ Flickr::Application.routes.draw do
     resource :photos do
     end
   end
+
+  resources :comments
 
   root :to => 'albums#index'
 

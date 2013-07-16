@@ -5,6 +5,14 @@
     <div>
       <ul>
         <li id="album_name"><%= link_to album.name, album_path(album.id) %></li>
+
+          <% album.comments.each do |comment| %>
+            <p class="comment">
+              "<%= comment.content %>"
+            </p>
+            <br>
+          <% end %>
+
       </ul>
     </div>
   </fieldset>
