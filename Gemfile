@@ -10,6 +10,7 @@ gem 'dotenv-rails'
 gem 'sorcery'
 gem 'mail'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'delayed_job_active_record'
 
 group :development do
   gem 'better_errors'
